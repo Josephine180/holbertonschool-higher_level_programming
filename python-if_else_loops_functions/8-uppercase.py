@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    for char in str:
-        if 97 <= ord(char) <= 122:  # Check if the character is lowercase
-            print(chr(ord(char) - 32), end="")  # Convert to uppercase and print
+ for c in str:
+        if ord('a') <= ord(c) <= ord('z'):  # Si le caractère est minuscule
+            print(chr(ord(c) - 32), end="")  # Convertir en majuscule et afficher
         else:
-            print(char, end="")  # Print non-lowercase characters as is
-    print()  # Print a new line at the end
+            print(c, end="")  # Si c'est une majuscule ou un autre caractère, l'afficher tel quel
+    print()  # Une fois la boucle terminée, imprimer un retour à la ligne
