@@ -4,7 +4,7 @@ def fizzbuzz():
     for c in range(1, 101):
         if not c % 3 and not c % 5:
             print("FizzBuzz", end=" ")
-        if not c % 3:
+        elif not c % 3:
             print("Fizz", end=" ")
         elif not c % 5:
             print("Buzz", end=" ")
