@@ -1,201 +1,229 @@
 # Python - Hello, World
+*   [Description](#description)
+*   [Quiz](#quiz)
 
-## Learning Objectives
-At the end of this project, you should be able to:
-- Use the Python interpreter.
-- Print text and variables using the `print` function.
-- Work with strings and perform string manipulation.
-- Understand indexing and slicing in Python.
-- Follow Python's official coding style using `pycodestyle`.
+_For this project, we expect you to look at this concept :
+
+*   [Python programming](/concepts/896)
+
+Author’s disclaimer
+-------------------
+
+    Welcome to the Python world!
+    
+    You'll soon find that with Python (and the majority of higher level languages), there are ten different ways to do the same thing. Some tasks will expect only one implementation, while other tasks will have multiple possible implementations.
+    Python has a linter / style guide, called PEP8, also now known as PyCode. At Holberton, we won't start off with using PyCode, because it's much more strict compared to PEP8. Don't worry if you see a warning when you are running PEP8, you can ignore it.
+    
+    Enjoy!
+    
+    - Guillaume
+    
+
+Resources
+---------
+
+**Read or watch**:
+
+Use this playlist as long as you are learning Python:
+
+*   [Learn to Program](/rltoken/n9ts_nUw1YtCR9BZtGrHdQ "Learn to Program")
+    
+*   [Whetting Your Appetite](/rltoken/9w2S6R8vtwlmQcPg33445w "Whetting Your Appetite")
+    
+*   [Using the Python Interpreter](/rltoken/O87tA-o6pQ8HXAl93xxGGA "Using the Python Interpreter")
+    
+*   [An Informal Introduction to Python](/rltoken/x1m4AhQ1Vy9eUBaXFLRHPQ "An Informal Introduction to Python") (_Read up until “3.1.2. Strings” included_)
+    
+*   [How To Use String Formatters in Python 3](/rltoken/dd7bIKsC3_0wb3Np_8URUA "How To Use String Formatters in Python 3")
+    
+*   [Pycodestyle – Style Guide for Python Code](/rltoken/qHCPZY23PoEBaDVce2P0nw "Pycodestyle -- Style Guide for Python Code")
+    
+
+Learning Objectives
+-------------------
+
+At the end of this project, you are expected to be able to [explain to anyone](/rltoken/e_ValpdMEXoyMauk0b_SSQ "explain to anyone"), **without the help of Google**:
+
+### General
+
+*   How to use the Python interpreter
+*   How to print text and variables using `print`
+*   How to use strings
+*   What are indexing and slicing in Python
+*   What is the official Python coding style and how to check your code with `pycodestyle`
+
+Requirements
+------------
+
+### Python Scripts
+
+*   Allowed editors: `vi`, `vim`, `emacs`
+*   All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.\*)
+*   All your files should end with a new line
+*   The first line of all your files should be exactly `#!/usr/bin/python3`
+*   A `README.md` file at the root of the repo, containing a description of the repository
+*   A `README.md` file, at the root of the folder of _this_ project, is mandatory
+*   Your code should use the pycodestyle (version 2.7.\*)
+*   All your files must be executable
+*   The length of your files will be tested using `wc`
+
+More Info
+---------
+
+### Pycodestyle
+
+`Pycodestyle` is now the [new standard of Python style code](/rltoken/-kju7-n2p8pzvgvgbmAyPw "new standard of Python style code")
+
+Tasks
+-----
+
+### 0\. Hello, print
+
+mandatory
+
+Write a Python script that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
+
+*   Use the function `print`
+
+**Repo:**
+
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `2-print.py`
+
+### 1\. Print integer
+
+mandatory
+
+Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/3-print_number.py "source code") in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line.
+
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/3-print_number.py "here")
+*   The output of the script should be:
+    *   the number, followed by `Battery street`,
+    *   followed by a new line
+*   You are not allowed to cast the variable `number` into a string
+*   Your code must be 3 lines long
+*   You have to use f-strings [tips](/rltoken/dd7bIKsC3_0wb3Np_8URUA "tips")
 
 
-## Project Requirements
-- Python 3.8+ is used for all scripts.
-- All code is written to conform to `pycodestyle` (version 2.7.*).
-- All scripts are executable and begin with `#!/usr/bin/python3`.
-- Each script ends with a new line.
+**Repo:**
 
----
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `3-print_number.py`
 
-## Task
 
-### 0. Hello, print
-Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+### 2\. Print float
 
-Use the function print.
+mandatory
 
-### Expectation : 
-```Python
-#!/usr/bin/python3
-print("\"Programming is like building a multilingual puzzle")
-``` 
+Complete the source code in order to print the float stored in the variable `number` with a precision of 2 digits.
 
-### Result 
-```Python
-"Programming is like building a multilingual puzzle
-```
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/4-print_float.py "here")
+*   The output of the program should be:
+    *   `Float:`, followed by the float with only 2 digits
+    *   followed by a new line
+*   You are not allowed to cast `number` to string
+*   You have to use f-strings    
 
-### 1. Print interger
-Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
+**Repo:**
 
-- You can find the source code here
-- The output of the script should be:the number, followed by Battery street,
-  followed by a new line;
-- You are not allowed to cast the variable number into a string;
-- Your code must be 3 lines long;
-- You have to use f-strings tips.
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `4-print_float.py`
 
-### Expectation 
-```Python
-guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
-98 Battery street
-guillaume@ubuntu:~/py/0x00$ 
-```
-### Result
-```Python
-#!/usr/bin/python3
-number = 98
-print(f"{number} Battery street")
-```
 
-### 2. Print float
-Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
+### 3\. Print string
 
-```Python
-#!/usr/bin/python3
-number = 3.14159
-```
+mandatory
 
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-Objectives
-The output of the program should be:
-Float: followed by the float with only 2 digits
-Followed by a new line.
-You are not allowed to cast number to string.
-You have to use f-strings.
+Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/5-print_string.py "source code") in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
 
-### Expectation
-```Python
-#!/usr/bin/python3
-number = 3.14159
-print(f"Float : {number:.2f}")
-```
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/5-print_string.py "here")
+*   The output of the program should be:
+    *   3 times the value of `str`
+    *   followed by a new line
+    *   followed by the 9 first characters of `str`
+    *   followed by a new line
+*   You are not allowed to use any loops or conditional statement
+*   Your program should be maximum 5 lines long    
 
-Result
-```Bash
-Float : 3.14
-```
+**Repo:**
 
-### 3. Print string
-Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `5-print_string.py`
 
-Source code
-#!/usr/bin/python3
-str = "Holberton School"
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-Objectives
-The output of the program should be:
-3 times the value of str.
-Followed by a new line.
-Followed by the 9 first characters of str.
-Followed by a new line.
-You are not allowed to use any loops or conditional statement.
-Your program should be maximum 5 lines long.
-Expectation
-#!/usr/bin/python3
-str = "Holberton School"
-print(f"{str * 3}")
-print(str[:9])
-Result
-Holberton SchoolHolberton SchoolHolberton School
-Holberton
-4. Play with strings
-Complete this source code to print Welcome to Holberton School!
+### 4\. Play with strings
 
-Source code
-#!/usr/bin/python3
-str1 = "Holberton"
-str2 = "School"
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-print(f"Welcome to {str1}!")
-Objectives
-You are not allowed to use any loops or conditional statements.
-You have to use the variables str1 and str2 in your new line of code.
-Your program should be exactly 5 lines long.
+mandatory
 
-### Expectation
-#!/usr/bin/python3
-str1 = "Holberton"
-str2 = "School"
-str1 = str1 + " " + str2
-print(f"Welcome to {str1}!")
-Result
-Welcome to Holberton School!
+Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/6-concat.py "source code") to print `Welcome to Holberton School!`
 
-### 5. Copy - Cut - Paste
-Complete this source code.
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/6-concat.py "here")
+*   You are not allowed to use any loops or conditional statements.
+*   You have to use the variables `str1` and `str2` in your new line of code
+*   Your program should be exactly 5 lines long
+    
+**Repo:**
 
-```Python
-Source code
-#!/usr/bin/python3
-word = "Holberton"
-```
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `6-concat.py`
 
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-print(f"First 3 letters: {word_first_3}")
-print(f"Last 2 letters: {word_last_2}")
-print(f"Middle word: {middle_word}")
-Objectives
-You are not allowed to use any loops or conditional statements.
-Your program should be exactly 8 lines long.
-word_first_3 should contain the first 3 letters of the variable word.
-word_last_2 should contain the last 2 letters of the variable word.
-middle_word should contain the value of the variable word without the first and last letters.
 
-###Expectation
-````Python 
-#!/usr/bin/python3
-word = "Holberton"
-word_first_3 = word[:3]
-word_last_2 = word[-2:]
-middle_word = word[1:-1]
-print(f"First 3 letters: {word_first_3}")
-print(f"Last 2 letters: {word_last_2}")
-print(f"Middle word: {middle_word}")
-Result
-First 3 letters: Hol
-Last 2 letters: on
-Middle word: olberto
-```
+### 5\. Copy - Cut - Paste
 
-### 6. Create a new sentence
-Complete this source code to print object-oriented programming with Python, followed by a new line.
+Score: 0% (Checks completed: 0%)
 
-Source code
-```Python
-#!/usr/bin/python3
-str = "Python is an interpreted, interactive, object-oriented programming\
- language that combines remarkable power with very clear syntax"
-```
+Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/7-edges.py "source code")
 
-# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-print(str)
-Objectives
-You are not allowed to use any loops or conditional statements.
-Your program should be exactly 5 lines long.
-You are not allowed to create new variables.
-You are not allowed to use string literals.
-Expectation
-#!/usr/bin/python3
-str = "Python is an interpreted, interactive, object-oriented programming\
-language that combines remarkable power with very clear syntax"
-str = str[39:54] + str[54:66] + str[105:111] + str[0:6]
-print(str)
-Result
-object-oriented programming with Python
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/7-edges.py "here")
+*   You are not allowed to use any loops or conditional statements
+*   Your program should be exactly 8 lines long
+*   `word_first_3` should contain the first 3 letters of the variable `word`
+*   `word_last_2` should contain the last 2 letters of the variable `word`
+*   `middle_word` should contain the value of the variable `word` without the first and last letters
+ 
 
-### 7. Easter Egg
+**Repo:**
+
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `7-edges.py`
+
+### 6\. Create a new sentence
+
+mandatory
+
+Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/8-concat_edges.py "source code") to print `object-oriented programming with Python`, followed by a new line.
+
+*   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/8-concat_edges.py "here")
+*   You are not allowed to use any loops or conditional statements
+*   Your program should be exactly 5 lines long
+*   You are not allowed to create new variables
+*   You are not allowed to use string literals
+
+**Repo:**
+
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `8-concat_edges.py`
+
+### 7\. Easter Egg
+
+mandatory
+
+Score: 0% (Checks completed: 0%)
+
 Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
 
-Objective
-Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py).
+*   Your script should be maximum 98 characters long (please check with `wc -m 9-easter_egg.py`)
+
+**Repo:**
+
+*   GitHub repository: `holbertonschool-higher_level_programming`
+*   Directory: `python-hello_world`
+*   File: `9-easter_egg.py`
+
+
