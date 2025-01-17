@@ -174,8 +174,6 @@ Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/6-conca
 
 ### 5\. Copy - Cut - Paste
 
-Score: 0% (Checks completed: 0%)
-
 Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/7-edges.py "source code")
 
 *   You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/master/7-edges.py "here")
@@ -213,8 +211,6 @@ Complete this [source code](https://github.com/hs-hq/0x00.py/blob/master/8-conca
 ### 7\. Easter Egg
 
 mandatory
-
-Score: 0% (Checks completed: 0%)
 
 Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
 
