@@ -1,7 +1,8 @@
 >>> from importlib import import_module
 >>> text_indentation = import_module('5-text_indentation').text_indentation
 >>> text_indentation("bonjour, je fais des tests")
-bonjour, je fais des tests>>> text_indentation()
+bonjour, je fais des tests
+>>> text_indentation()
 Traceback (most recent call last):
     ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
