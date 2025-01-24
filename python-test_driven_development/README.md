@@ -3,8 +3,6 @@
 *   [Description](#description)
 *   [Quiz](#quiz)
 
-[Go to tasks](#)
-
 ![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/246/giphy-4.gif)
 
 Background Context
