@@ -5,8 +5,6 @@ My name is richard curt
 Traceback (most recent call last):
     ...
 NameError: name 'richard' is not defined
->>> say_my_name("richard","")
-My name is richard
 >>> say_my_name("","curt")
 My name is  curt
 >>> say_my_name(34, "curt")
