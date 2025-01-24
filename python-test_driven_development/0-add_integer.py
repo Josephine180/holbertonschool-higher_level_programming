@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+
+"""
+Ce module contient une fonction simple appelée `add_integer`.
+
+La fonction `add_integer(a, b=98)` prend deux arguments et retourne leur somme
+après les avoir convertis en entiers.
+
+Elle soulève l'exception `TypeError` si les arguments ne sont pas des nombres.
+
+"""
+
+
 def add_integer(a, b=98):
     """
     This function adds two integers.
