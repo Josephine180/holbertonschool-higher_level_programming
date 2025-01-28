@@ -2,8 +2,8 @@
 """
 Module Rectangle
 
-Ce module définit une classe `Rectangle` permettant de représenter un rectangle.
-Il inclut des propriétés pour la largeur et la hauteur avec des contrôles de validation.
+Ce module définit une classe `Rectangle`.
+Il inclut des propriétés pour la largeur et la hauteur.
 """
 
 
@@ -12,28 +12,28 @@ class Rectangle:
     La classe `Rectangle` permet de représenter un rectangle.
 
     Attributs :
-        width (int) : La largeur du rectangle (par défaut 0). Doit être un entier >= 0.
-        height (int) : La hauteur du rectangle (par défaut 0). Doit être un entier >= 0.
+        width (int) : La largeur du rectangle >= 0.
+        height (int) : La hauteur du rectangle >= 0.
     """
     def __init__(self, width=0, height=0):
-    """
+        """
         Initialise une nouvelle instance de la classe `Rectangle`.
 
         Args:
-            width (int, optionnel) : La largeur du rectangle (par défaut 0).
-            height (int, optionnel) : La hauteur du rectangle (par défaut 0).
+            width (int, optionnel) : La largeur du rectangle.
+            height (int, optionnel) : La hauteur du rectangle.
 
         Raises:
             TypeError : Si `width` ou `height` n'est pas un entier.
             ValueError : Si `width` ou `height` est inférieur à 0.
     """
 
-    self.width = width
+        self.width = width
         self.height = height
 
     @property
     def width(self):
-    """
+        """
         Getter pour la largeur du rectangle.
 
         Returns:
@@ -43,8 +43,8 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-    """
-        Setter pour la largeur du rectangle. Valide que la valeur est un entier >= 0.
+        """
+        Setter pour la largeur du rectangle.
 
         Args:
             value (int) : La nouvelle largeur du rectangle.
@@ -52,7 +52,7 @@ class Rectangle:
         Raises:
             TypeError : Si `value` n'est pas un entier.
             ValueError : Si `value` est inférieur à 0.
-    """
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -61,7 +61,7 @@ class Rectangle:
 
     @property
     def height(self):
-    """
+        """
         Getter pour la hauteur du rectangle.
 
         Returns:
@@ -71,10 +71,10 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-    """
-        Setter pour la hauteur du rectangle. Valide que la valeur est un entier >= 0.
+        """
+        Setter pour la hauteur du rectangle.
 
-        Args:
+         Args:
             value (int) : La nouvelle hauteur du rectangle.
 
         Raises:
@@ -86,3 +86,23 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Def aire du rectangle.
+
+        Returns:
+            int: aire du rectangle
+        """
+        return self.__width * self.height
+
+    def perimeter(self):
+        """
+        Def perimètre du rectangle
+
+        Returns:
+            int : Perimètre du rectangle
+        """
+        return 2 * (self.__width + self.__height)
+        if self.__width or self.__height == 0:
+            return 0
