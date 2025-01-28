@@ -121,4 +121,4 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        print(f"Bye rectangle ...")
+        print("Bye rectangle...")
