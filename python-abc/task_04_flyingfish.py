@@ -17,14 +17,14 @@ class Bird:
 
 
 class FlyingFish(Fish, Bird):
+    def fly(self):
+        print("The flying fish is soaring!")
+
     def swim(self):
         print('The flying fish is swimming!')
 
     def habitat(self):
         print('the flying fish lives both in water and the sky!')
-
-    def fly(self):
-        print('The flying fish is soaring!')
 
     def mro(self):
         print(FlyingFish.mro())
