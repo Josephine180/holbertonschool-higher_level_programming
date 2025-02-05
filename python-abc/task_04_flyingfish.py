@@ -2,26 +2,26 @@
 
 class Fish:
     def swim(self):
-        print(f'The fish is swimming')
+        print('The fish is swimming')
 
     def habitat(self):
-        print(f'The fish lives in water')
+        print('The fish lives in water')
 
 
 class Bird:
     def fly(self):
-        print(f'The bird is flying')
+        print('The bird is flying')
 
     def habitat(self):
-        print(f'The bird lives in the sky')
+        print('The bird lives in the sky')
 
 
 class FlyingFish(Fish, Bird):
     def swim(self):
-        print(f'The flying fish is swimming!')
+        print('The flying fish is swimming!')
 
     def habitat(self):
-        print(f'the flying fish lives both in water and the sky!')
+        print('the flying fish lives both in water and the sky!')
 
     def fly(self):
-        print(f'The flying fish is soaring!')
+        print('The flying fish is soaring!')
