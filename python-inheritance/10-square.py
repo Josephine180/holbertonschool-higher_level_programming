@@ -4,6 +4,7 @@ Importation de la classe Rectangle depuis le fichier '9-rectangle.py'
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Classe Square qui hérite de Rectangle.
