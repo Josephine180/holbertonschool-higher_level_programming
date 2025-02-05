@@ -25,3 +25,6 @@ class FlyingFish(Fish, Bird):
 
     def fly(self):
         print('The flying fish is soaring!')
+
+    def mro(self):
+        print(FlyingFish.mro())
