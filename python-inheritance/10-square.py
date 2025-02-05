@@ -15,10 +15,10 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def area(self):
-             """
-    Calcule l'aire du carré.
+        """
+        Calcule l'aire du carré.
 
-    Retourne :
+        Retourne :
         int : L'aire du carré (taille * taille).
-    """
-        return (self.__size * self.__size)
+        """
+        return self.__size * self.__size
