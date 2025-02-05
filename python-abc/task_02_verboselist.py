@@ -5,7 +5,6 @@ class VerboseList(list):
         super().append(item)
         print(f'Added {item} to the list.')
 
-
     def extend(self, iterable):
         num_items = len(iterable)
         super().extend(iterable)
@@ -18,5 +17,4 @@ class VerboseList(list):
     def pop(self, index=-1):
         item = self[index]
         super().pop(index)
-        print(f'Popped {item} from the list.') 
-
+        print(f'Popped {item} from the list.')
