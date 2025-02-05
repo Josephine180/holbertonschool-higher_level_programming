@@ -4,7 +4,7 @@ class VerboseList(list):
     pass
 
     def append(self, item):
-        print(f'Added {item} to the list. ')
+        print(f'Added {item} to the list.')
         super().append(item)
 
     def extend(self, iterable):
