@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
 class VerboseList(list):
-    pass
-
     def append(self, item):
-        print(f'Added {item} to the list.')
         super().append(item)
+        print(f'Added {item} to the list.')
+
 
     def extend(self, iterable):
         num_items = len(iterable)
@@ -18,5 +17,6 @@ class VerboseList(list):
 
     def pop(self, index=-1):
         item = self[index]
-        print(f'Popped {item} from the list.')
         super().pop(index)
+        print(f'Popped {item} from the list.') 
+
