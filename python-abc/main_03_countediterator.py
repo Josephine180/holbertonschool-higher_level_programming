@@ -10,4 +10,3 @@ try:
         print(f"Got {item}, total {counted_iter.get_count()} items iterated.")
 except StopIteration:
     print("No more items.")
-    
