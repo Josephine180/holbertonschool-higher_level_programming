@@ -23,6 +23,24 @@ et retourne le nombre de caractères ajoutés.
 
 
 def append_write(filename="", text=""):
+    """
+    Ajoute une chaîne de caractères à un fichier texte (UTF-8) et
+    retourne le nombre de caractères ajoutés.
+
+    Paramètres :
+    filename (str) : Le nom du fichier dans lequel ajouter du texte.
+    Si le fichier n'existe pas, il sera créé.
+    text (str) : La chaîne de caractères à ajouter au fichier.
+
+    Retourne :
+    int : Le nombre de caractères ajoutés dans le fichier.
+
+    Cette fonction ouvre le fichier spécifié en mode ajout ('a'),
+    ce qui permet d'ajouter le texte
+    à la fin du fichier sans supprimer son contenu existant.
+    Si le fichier n'existe pas, il sera créé.
+    L'ajout se fait avec un encodage UTF-8.
+    """
     with open(filename, 'a', encoding="utf-8") as file:
         file.write(text)
         return len(text)
