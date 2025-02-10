@@ -40,5 +40,5 @@ def to_json_string(my_obj):
     effectuée pour différents types d'objets Python
     comme les dictionnaires, les listes, les entiers, etc.
     """
-    my_str = json.dumps(my_obj)
-    return my_str
+    return json.dumps(my_obj)
+    
