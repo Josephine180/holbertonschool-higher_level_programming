@@ -3,7 +3,6 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-
 class TestMaxInteger(unittest.TestCase):
     def test_positive_integers(self):
         """Test list of positive integers"""
@@ -52,8 +51,6 @@ class TestMaxInteger(unittest.TestCase):
         """Test if non-iterable is passed as an argument"""
         with self.assertRaises(TypeError):
             max_integer(42)
-
-
 
 
 if __name__ == '__main__':
