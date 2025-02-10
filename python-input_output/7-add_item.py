@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import sys
-import json
 import os
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
@@ -21,6 +20,10 @@ Fonctions :
 - load_from_json_file : Charge la liste depuis le fichier JSON existant.
 """
 
+def main():
+    """Fonction principale qui ajoute les arguments à la liste et
+    la sauvegarde dans un fichier JSON."""
+
 filename = "add_item.json"
 
 # Charger le fichier existant, sinon initialiser une liste vide
@@ -34,3 +37,6 @@ my_list.extend(sys.argv[1:])
 
 # Sauvegarder la liste mise à jour dans le fichier JSON
 save_to_json_file(my_list, filename)
+
+if __name__ == "__main__":
+    main()
