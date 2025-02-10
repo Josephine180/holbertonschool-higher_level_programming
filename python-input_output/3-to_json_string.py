@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-import json
 """
 Module de conversion d'objet Python en chaîne JSON.
 
@@ -20,7 +18,7 @@ Retourne la chaîne JSON correspondante à l'objet
 2. `to_json_string([1, 2, 3])` :
 Retourne la chaîne JSON `"[1, 2, 3]"` correspondant à la liste `[1, 2, 3]`.
 """
-
+import json
 
 def to_json_string(my_obj):
     """
@@ -40,5 +38,6 @@ def to_json_string(my_obj):
     effectuée pour différents types d'objets Python
     comme les dictionnaires, les listes, les entiers, etc.
     """
-    return json.dumps(my_obj)
-    
+    json_string = json.dumps(my_obj)
+    return json_string
+
