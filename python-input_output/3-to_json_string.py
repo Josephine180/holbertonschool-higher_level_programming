@@ -20,6 +20,7 @@ Retourne la chaîne JSON `"[1, 2, 3]"` correspondant à la liste `[1, 2, 3]`.
 """
 import json
 
+
 def to_json_string(my_obj):
     """
     Convertit un objet Python en une chaîne JSON.
@@ -40,4 +41,3 @@ def to_json_string(my_obj):
     """
     json_string = json.dumps(my_obj)
     return json_string
-
