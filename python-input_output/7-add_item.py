@@ -26,6 +26,9 @@ filename = "add_item.json"
 # Charger le fichier existant, sinon initialiser une liste vide
 if os.path.exists(filename):
     my_list = load_from_json_file(filename)
+    # Vérifier si la liste chargée est vide ou contient une liste imbriquée et la corriger
+    if isinstance(my_list, list) and len(my_list) == 1 and isinstance(my_list[0], list):
+        my_list = my_list[0]  # Déballer la liste si elle est imbriquée
 else:
     my_list = []
 
