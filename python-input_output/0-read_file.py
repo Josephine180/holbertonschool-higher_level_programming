@@ -1,4 +1,18 @@
 #!/usr/bin/python3
+"""
+Module de lecture de fichiers.
+
+Ce module contient une fonction `read_file()`
+qui permet de lire le contenu d'un fichier texte
+et de l'afficher dans la sortie standard (l'écran).
+Le fichier est ouvert en mode lecture avec un
+encodage UTF-8 par défaut.
+
+Fonctions :
+- read_file(filename="") :
+Ouvre le fichier spécifié et affiche son contenu.
+
+"""
 def read_file(filename=""):
     """
     Lit le contenu d'un fichier texte et l'affiche dans la sortie standard.
