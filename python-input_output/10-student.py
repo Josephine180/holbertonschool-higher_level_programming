@@ -52,17 +52,13 @@ class Student:
         dict : Un dictionnaire contenant les attributs `first_name`,
         `last_name` et `age` de l'objet.
         """
-        data = self.__dict__
+        if (not isinstance(attrs, list) or
+                not all(isinstance(attr, str) for attr in attrs)):
+            return {"age": self.age, "last_name": self.last_name,
+                    "first_name": self.first_name}
+        ordered = {}
+        for key in ["age", "last_name", "first_name"]:
+            if key in attrs and key in self.__dict__:
+                ordered[key] = self.__dict__[key]
 
-        if (
-            isinstance(attrs, list)
-            and all(isinstance(attr, str) for attr in attrs)
-        ):
-            # Ne garder que les clés demandées, dans l'ordre de attrs
-            return {key: data[key] for key in attrs if key in data}
-        # Retourne tous les attributs dans l'ordre attendu
-        return {
-            "age": self.age,
-            "last_name": self.last_name,
-            "first_name": self.first_name
-        }
+        return ordered
