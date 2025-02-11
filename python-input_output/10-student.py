@@ -52,13 +52,8 @@ class Student:
         dict : Un dictionnaire contenant les attributs `first_name`,
         `last_name` et `age` de l'objet.
         """
-        if (not isinstance(attrs, list) or
-                not all(isinstance(attr, str) for attr in attrs)):
-            return {"age": self.age, "last_name": self.last_name,
-                    "first_name": self.first_name}
-        ordered = {}
-        for key in ["age", "last_name", "first_name"]:
-            if key in attrs and key in self.__dict__:
-                ordered[key] = self.__dict__[key]
-
-        return ordered
+        if attrs is not None and isinstance(attrs, list):
+            return {key: getattr(
+                self, key) for key in attrs if hasattr(self, key)}
+        else:
+            return self.__dict__
