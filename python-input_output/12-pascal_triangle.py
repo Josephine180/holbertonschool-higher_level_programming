@@ -1,5 +1,17 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
+    """
+    Génère un triangle de Pascal de n lignes.
+
+    Cette fonction crée un triangle de Pascal sous
+    forme de liste de listes d'entiers.
+    Paramètres :
+    n (int) : Le nombre de lignes du triangle de Pascal à générer.
+
+    Retourne :
+    list : Une liste de listes représentant le triangle de Pascal. Si n <= 0,
+          la fonction retourne une liste vide.
+    """
     if n <= 0:
         return []
     # initialisation du triangle avec la première ligne [1]
