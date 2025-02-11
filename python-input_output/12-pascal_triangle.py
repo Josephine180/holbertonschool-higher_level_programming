@@ -1,4 +1,14 @@
 #!/usr/bin/python3
+"""
+12-main.py
+
+Ce fichier teste la fonction pascal_triangle()
+définie dans '12-pascal_triangle.py'.
+Il génère et affiche le triangle de Pascal pour
+un nombre donné de lignes.
+"""
+
+
 def pascal_triangle(n):
     """
     Génère un triangle de Pascal de n lignes.
