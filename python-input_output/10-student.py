@@ -8,9 +8,6 @@ avec ses informations de base telles que son prénom,
 son nom de famille et son âge.
 
 """
-from collections import OrderedDict
-
-
 class Student:
     """
     Classe représentant un étudiant avec son prénom, son nom et son âge.
