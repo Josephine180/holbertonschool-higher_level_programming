@@ -7,7 +7,7 @@ of a Python dictionary.
 import json
 
 
-def serialize_and_save_to_file(date, filename):
+def serialize_and_save_to_file(data, filename):
     """
     Serializes a Python dictionary to a JSON file.
 
@@ -32,4 +32,6 @@ def load_and_deserialize(filename):
     Returns:
         dict: The deserialized dictionary.
     """
-    return json.load(file)
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    return data
