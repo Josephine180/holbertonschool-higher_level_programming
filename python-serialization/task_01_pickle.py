@@ -115,7 +115,7 @@ class CustomObject:
             TypeError: If `is_student` is not a boolean.
         """
         if not isinstance(is_student, bool):
-            raise TypeError("must be a boleen")
+            raise TypeError("must be a bolean")
         self._is_student = is_student
 
     def display(self):
@@ -145,8 +145,8 @@ class CustomObject:
         try:
             with open(filename, 'wb') as file:
                 pickle.dump(self, file)
-        except Exception:
-            print(f"Error with the serialization")
+        except Exception as e:
+            print(f"Error with the serialization : {e}")
 
     @classmethod
     def deserialize(cls, filename):
@@ -169,6 +169,6 @@ class CustomObject:
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except (FileNotFoundError, pickle.PickleError):
-            print(f"Error with the deserialization")
+        except (FileNotFoundError, pickle.PickleError, pickle.UnpicklingError) as e:
+            print(f"Error with the deserialization: {e}")
             return None
