@@ -5,6 +5,7 @@ Module for serializing and deserializing a custom object using pickle.
 import pickle
 import os
 
+
 class CustomObject:
     """
     A class representing a custom object with
@@ -128,9 +129,9 @@ class CustomObject:
             - Age: [age]
             - Is Student: [is_student]
         """
-        print(f'Name: {self.name}')
-        print(f'Age: {self.age}')
-        print(f'Is Student: {self.is_student}')
+        print(f'Name: {self.name}\n'
+              f'Age: {self.age}\n'
+              f'Is Student: {self.is_student}')
 
     def serialize(self, filename):
         """
@@ -166,15 +167,10 @@ class CustomObject:
             FileNotFoundError: If the specified file is not found.
             pickle.PickleError: If there is an error with deserialization.
         """
-        filename = "mon_fichier.txt"
 
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-
         except (FileNotFoundError, pickle.PickleError):
             print(f"Error with the deserialization")
-            return None
-        if os.path.exists(filename) and os.path.getsize(filename) == 0:
-            print("Le fichier est vide.")
             return None
