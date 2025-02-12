@@ -3,7 +3,7 @@
 Module for serializing and deserializing a custom object using pickle.
 """
 import pickle
-
+import os
 
 class CustomObject:
     """
@@ -166,10 +166,15 @@ class CustomObject:
             FileNotFoundError: If the specified file is not found.
             pickle.PickleError: If there is an error with deserialization.
         """
+        filename = "mon_fichier.txt"
+
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
 
         except (FileNotFoundError, pickle.PickleError):
             print(f"Error with the deserialization")
+            return None
+        if os.path.exists(filename) and os.path.getsize(filename) == 0:
+            print("Le fichier est vide.")
             return None
