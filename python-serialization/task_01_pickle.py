@@ -3,8 +3,6 @@
 Module for serializing and deserializing a custom object using pickle.
 """
 import pickle
-import os
-
 
 class CustomObject:
     """
