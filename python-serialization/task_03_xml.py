@@ -24,8 +24,8 @@ def serialize_to_xml(dictionary, filename):
         child.text = str(value)
         root.append(child)
 
-        tree = ET.ElementTree(root)
-        tree.write(filename)
+    tree = ET.ElementTree(root)
+    tree.write(filename)
 
 
 def deserialize_from_xml(filename):
