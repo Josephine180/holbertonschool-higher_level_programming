@@ -125,7 +125,7 @@ class CustomObject:
                 # obj = pickle.load(f)
                 return pickle.load(f)
             # return obj
-        except (FileNotFoundError, pickle.PicklingError, /
+        except (FileNotFoundError, pickle.PicklingError,
                 Exception, IOError) as e:
             # Handle file not found, unpickling errors, and general I/O errors
             return None
