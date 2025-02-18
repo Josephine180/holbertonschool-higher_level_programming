@@ -44,13 +44,14 @@ def fetch_and_save_posts():
         posts = response.json()
 
         filename = "posts.csv"
-
-        with open(filename, "w", encoding="utf-8") as file:
-            fieldnames = ["id", "title", "body"]
-            writer = csv.DictWriter(file, fieldnames=fieldnames)
+        fieldnames = [
+            {"id": post["id"], "title": post["title"],
+             "body": post["body"]} for post in posts]
+        with open("posts.csv", "w", encoding="utf-8") as file:
+            writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
             writer.writeheader()
-            writer.writerows(posts)
+            writer.writerows(fieldnames)
 
-        print(f"Les posts ont été enregistrés dans {filename}")
+        print(f"Les posts ont été enregistrés dans posts.csv")
     else:
         print("Erreur lors de la récupération des posts")
