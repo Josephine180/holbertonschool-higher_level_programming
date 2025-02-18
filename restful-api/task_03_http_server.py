@@ -16,13 +16,22 @@ Fonctionnalités :
 
 import http.server
 import json
-from http import HTTPStatus
+import BaseHTTPRequestHandler
 
-class SimpleAPIHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
+class SimpleAPI(BaseHTTPRequestHandler):
     def do_GET(self):
         """Gère les requêtes GET et route vers le bon endpoint."""
+        self.send_response(status)
+        self.send_header("Content-Type", content_type)
+        self.end_headers()
+        if content:
+            self.wfile.write(content.encode('utf-8'))
+        
         if self.path == "/":
             self._send_response(HTTPStatus.OK, "Hello, this is a simple API!")
+        
+        elif self.path == "favicon.ico":
+            self._send_response(HTTPStatus.NO_CONTENT)
 
         elif self.path == "/data":
             data = {"name": "John", "age": 30, "city": "New York"}
@@ -36,8 +45,14 @@ class SimpleAPIHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self._send_response(HTTPStatus.OK, json.dumps(info), content_type="application/json")
 
         else:
-            self._send_response(HTTPStatus.NOT_FOUND, json.dumps({"error": "Endpoint not found"}), content_type="application/json")
+            self._send_response(HTTPStatus.NOT_FOUND, "404 Not Found")
 
-    def _send_response(self, status, message, content_type="text/plain"):
-        self.send_response(status)
-        self.send_header("Content-Type", content_
+def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
+    """Démarre le serveur HTTP sur le port spécifié."""
+    server_address = ("", port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Server running on port {port}...")
+    httpd.serve_forever()
+
+if __name__ == "__main__":
+    run()
