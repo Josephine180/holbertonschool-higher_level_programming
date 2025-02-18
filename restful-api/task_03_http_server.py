@@ -21,37 +21,41 @@ import json
 class SimpleAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html')
-            self.end_headers()
-            self.wfile.write(b"Hello, this is a simple API!")
+            self.send_text_response("Hello, this is a simple API!")
         elif self.path == "/data":
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
             data = {"name": "John", "age": 30, "city": "New York"}
-            self.wfile.write(json.dumps(data).encode('utf-8'))
+            self.send_json_response(data)
         elif self.path == "/status":
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html')
-            self.end_headers()
-            self.wfile.write(b"OK")
+            self.send_text_response("OK")
         elif self.path == '/info':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            response = {
-                'version': '1.0',
-                'description': 'A simple API built with http.server'
-            }
-            self.wfile.write(json.dumps(response).encode('utf-8'))
+            info = {"version": "1.0", "description": "A simple API built with http.server"}
+            self.send_json_response(info)
         else:
-            self.send_response(404)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
-            error_message = {b"Endpoint not found"}
-            self.wfile.write(json.dumps(error_message).encode('utf-8'))
+            error_message = {"error": "Endpoint not found"}
+            self.send_json_response(error_message, status=404)
+     def send_text_response(self, message, status=200):
+        """
+        Envoie une réponse en texte brut.
 
+        :param message: Texte de la réponse.
+        :param status: Code HTTP (200 par défaut).
+        """
+        self.send_response(status)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(message.encode("utf-8"))
+
+    def send_json_response(self, data, status=200):
+        """
+        Envoie une réponse JSON.
+
+        :param data: Dictionnaire à envoyer sous forme de JSON.
+        :param status: Code HTTP (200 par défaut).
+        """
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(json.dumps(data).encode("utf-8"))
 
 def run():
     server_address = ('', 8000)
