@@ -13,8 +13,6 @@ Fonctionnalités :
 - Autres routes : Retourne une erreur `404 Not Found`.
 
 """
-#!/usr/bin/env python3
-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
