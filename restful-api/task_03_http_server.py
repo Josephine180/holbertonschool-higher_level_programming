@@ -18,10 +18,6 @@ import json
 class SimpleAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Ignorer la requête du favicon pour éviter une erreur 404
-        if self.path == "/favicon.ico":
-            self.send_response(204)
-            self.end_headers()
-            return
         if self.path == "/":
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
@@ -49,14 +45,14 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode('utf-8'))
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'texte/html')
             self.end_headers()
-            error_message = {"error": "Endpoint not found"}  # Correction ici
-            self.wfile.write(json.dumps(error_message).encode('utf-8'))
-def run():
-    server_address = ('', 8000)
-    httpd = HTTPServer(server_address, SimpleAPIHandler)
-    print("Serveur démarré sur http://localhost:8000")
+            self.wfile.write(b"Endpoint not found")
+            
+def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Début d'API sur le port {port}")
     httpd.serve_forever()
 if __name__ == '__main__':
     run()
