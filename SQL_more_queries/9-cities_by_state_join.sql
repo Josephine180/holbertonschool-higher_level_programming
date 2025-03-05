@@ -1,4 +1,6 @@
 -- list all cities 
 -- in database
 SELECT cities.id, cities.name, states.name
-FROM hbtn_0d_usa;
+FROM cities
+JOIN states ON cities.state_id = state_id
+ORDER BY cities.id;
