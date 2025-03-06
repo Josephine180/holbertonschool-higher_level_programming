@@ -28,9 +28,9 @@ if __name__ == "__main__":
 
     query = ("SELECT * FROM states "
              "WHERE BINARY name = %s"
-             "ORDER BY id ASC".format(state_name))
+             "ORDER BY id ASC")
 
-    cursor.execute(query)
+    cursor.execute(query, (state_name,))
 
     results = cursor.fetchall()
     for row in results:
