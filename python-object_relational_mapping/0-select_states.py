@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+
+"""
+This script connects to a MySQL database
+and lists all states from the 'states' table,
+ordered by 'id'. It takes three arguments:
+MySQL username, password, and database name.
+"""
 import MySQLdb
 import sys
 
