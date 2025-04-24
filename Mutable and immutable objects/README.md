@@ -89,4 +89,4 @@ a = [1, 2, 3]
 add_elementt(a)
 print(a)  # [1, 2, 3, 100] → List modified
 ```
-In conclusion knowing the difference between mutable and immutable objects is useful in Python. It helps you write cleaner code, avoid weird bugs, and better understand how things work under the hood — especially when using functions. Once you get the logic, it really makes a difference in how you approach your code.
+In conclusion knowing the difference between mutable and immutable objects is useful in Python. It helps to write cleaner code, avoid weird bugs, and better understand how things work. 
