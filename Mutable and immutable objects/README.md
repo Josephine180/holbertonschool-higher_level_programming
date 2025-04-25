@@ -1,8 +1,11 @@
+![Description de l'image](https://upload.wikimedia.org/wikipedia/commons/9/90/IPython.png)
+  
+  
   # Mutable and immutable objects in Python :
 
 In Python everything is an object. An object is an entity composed of data (called attributes) and behaviors (called methods). Understanding the difference between immutable and mutable objects is essential. This concept helps improve the code’s readability, gives a better understanding of how functions work and avoids unexpected bugs. In this article we’ll look at what is an object through the notion of type and id.  Finally, we’ll explain what makes an object mutable or immutable, and why it matters so much in Python programming.
 
-First, every object has a type, an identifier and a value. The type defines the characteristics of the object. We can find it with the function type() and it cannot be modified. The id of an object doesn’t change after his creation. It represents the memory address and is useful for checking if two objects are the same with the comparator “is”.
+First, every object has a type, an identifier and a value. The type defines the characteristics of the object. We can find it with the function `type()` and it cannot be modified. The id of an object doesn’t change after his creation. It represents the memory address and is useful for checking if two objects are the same with the comparator `is`.
 
 ```
 # Example with a list
@@ -24,7 +27,7 @@ b = a
 # Verification if a and b are the same object with 'is'.
 print("Are a and b the same object?", a is b)  # True
 ```
-The objects can be divided into two categories : mutable and immutable. Mutable objects can be modified. In fact, we can change the value and the type without touching the identifier. List, dictionary and set are mutable objects.
+The objects can be divided into two categories : mutable and immutable. Mutable objects can be modified. In fact, we can change the value and the type without touching the identifier. `List`, `dictionary` and `set` are mutable objects.
 
 ```
 my_list = [1, 2, 3]
@@ -32,9 +35,9 @@ my_list.append(4)
 print(my_list)  # [1, 2, 3, 4]
 ```
 
-The list has been modified but it keeps the same id (id(ma_liste)). It’s still the same object in memory.
+The list has been modified but it keeps the same id **id(ma_liste)**. It’s still the same object in memory.
 
-Immutable objects are objects which cannot be modified. Specifically we found the type of int, float, strings, booleans and tuples. If we try to modify them, Python will raise an error. The mutability of an object is determined by its type and not its value.
+Immutable objects are objects which cannot be modified. Specifically we found the type of `int`, `float`, `strings`, `booleans` and `tuples`. If we try to modify them, Python will raise an error. The mutability of an object is determined by its type and not its value.
 
 ```
 # Example witt a tuple
